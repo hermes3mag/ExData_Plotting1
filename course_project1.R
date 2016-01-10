@@ -16,3 +16,8 @@ power<-mutate(power, TS = paste(power$Date, power$Time))
 DTS<-strptime(power$TS, format= '%Y-%m-%d %T')
 power<-cbind(power, DTS)
 power<-tbl_df(power)
+##===============
+##Plot1
+png("Plot1.png")
+hist(power$Global_active_power, col="red", xlab = 'Global Active Power (kilowatts)', main='Global Active Power')
+dev.off()
