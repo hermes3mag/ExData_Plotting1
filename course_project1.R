@@ -21,3 +21,8 @@ power<-tbl_df(power)
 png("Plot1.png")
 hist(power$Global_active_power, col="red", xlab = 'Global Active Power (kilowatts)', main='Global Active Power')
 dev.off()
+##===============
+##Plot2
+png("Plot2.png")
+with(power, plot(DTS,Global_active_power, type = 'l' ))
+dev.off()
